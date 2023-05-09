@@ -2,6 +2,14 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
 body {
   line-height: 1.6;
   font-size: 20px;
@@ -27,7 +35,9 @@ h6 {
 .heading-large {
   margin-bottom: 24px;
   text-transform: uppercase;
-  font-size: 30px;
+  /* font-size: 30px; */
+  font-size: 1.5rem;
+
   color: var(--color-brand-primary-base)
 }
 
@@ -75,15 +85,83 @@ h6 {
 }
 
 
+.container {
+  width: 96vw;
+  margin: 0 auto;
+}
+
+#logo {
+width: 38vw;
+display: inline-block;
+vertical-align: top;
+}
+
+#menu {
+  width: 38vw;
+  display: inline-block;
+}
+
+
+.all-workers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.workers {
+  text-align: center;
+}
+
+.worker-name {
+  margin-bottom: 0;
+  line-height: 1.2;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-interface-commom-dark);
+  text-transform: uppercase;
+}
+
+.icons-app {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.6rem;
+  text-align: center;
+  margin-top: 1.2rem ;
+}
+
+
 /*
 /* Media Queries Examples
 */
 
 /* Smartphone Portrait */
-@media(min-width: 480px) and (max-width: 768px) {
-  .my-class { 
-    width: 300px;
+
+@media(max-width: 1440px) {
+  .container {
+    width: 67vw;
   }
+  .workers {
+    width: 25vw;
+  }
+}
+
+@media(max-width: 480px) {
+  .container {
+    width: 94vw;
+  }
+
+  .all-workers {
+    flex-direction: column;
+  }
+
+  .workers {
+    margin-bottom: 1.2rem;
+  }
+
+  .icons-app {
+    flex-direction: column;
+  }
+
 }
 
 /* Tablets/ IPad Portrait */
