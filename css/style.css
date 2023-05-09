@@ -64,8 +64,18 @@ h6 {
   background-position: top;
 }
 
+#navigator {
+  display: flex;
+}
+
 .menu { 
   font-family: 'Open Sans', Helvetica, Arial, Sans-serif;
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100vh;
+  padding: 1rem;
+  background-color: var(--color-text-dark);
 }
 
 .menu-item {
@@ -99,6 +109,7 @@ vertical-align: top;
 #menu {
   width: 38vw;
   display: inline-block;
+  text-align: right;
 }
 
 
@@ -146,6 +157,27 @@ vertical-align: top;
 }
 
 @media(max-width: 480px) {
+
+  .menu{
+    top: 0;
+    left: -60vw;
+    width: 60vw;
+    height: 100vh;
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--color-text-dark);
+    position: absolute;
+  }
+
+  .menu.open{
+    left: 0;
+  }
+
+  .menu-item {
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+  }
+
   .container {
     width: 94vw;
   }

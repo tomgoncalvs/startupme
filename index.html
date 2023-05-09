@@ -17,6 +17,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700"
     />
+    <script type="text/javascript" src="./js/botao.js"></script>
   </head>
   <body>
     <header id="banner">
@@ -37,6 +38,7 @@
               <li class="menu-item"><a href="#apps">apps</a></li>
               <li class="menu-item"><a href="#contact">contato</a></li>
             </ul>
+            <button class="menu-button">Menu</button>
           </div>
         </nav>
       </div>
@@ -361,5 +363,18 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      var menuButton = document.querySelector(".menu-button");
+      var menu = document.querySelector(".menu")
+
+      menuButton.addEventListener("click", function () {
+        if(menu.classList.contains("open")) {
+          menu.classList.remove("open");
+        } else {
+          menu.classList.add("open");
+        }
+      });
+    </script>
   </body>
 </html>
